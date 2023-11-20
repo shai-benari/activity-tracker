@@ -12,7 +12,11 @@
             <h1>Activity tracker</h1>
         </div>
         <div class="add__activity">
-            <label for="name" >Username</label>
+            <label for="name" >Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="add__activity">
+            <label for="name" >Activity</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div class="add__activity">
@@ -23,6 +27,9 @@
             <label for="startTime" >End time </label>
             <input type="time" id="startTime" name="startTime" required>
         </div>
+        <div class="btn">
+            <BUtton class="btnActivity">Submit activity</BUtton>
+         </div>
         </form>
     </main>
     <script src="dist/tracker.js"></script>

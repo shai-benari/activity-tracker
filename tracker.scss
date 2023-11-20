@@ -1,4 +1,4 @@
-,
+*,
 *::before , ::after{
     box-sizing: border-box;
 }
@@ -24,6 +24,14 @@ INPUT{
     padding: 4px 5PX;
     font-weight: 600;
     border-radius: 10PX;
+    width: 80%;
+}
+button{
+    font-size: 1rem;
+    padding: 4px 0;
+    font-weight: 500;
+    padding: 0.3rem 2rem;
+    border-radius: 5px;
 }
 .addActivity{
     background: rgb(108, 132, 241);
@@ -31,9 +39,10 @@ INPUT{
     font-weight: 500;
     font-size: 2rem;
     border-radius: 12px;
-    aspect-ratio: 3/2;
+    aspect-ratio: 1/1;
 
     display: grid;
     align-items: center;
-    justify-items: center;
+    justify-items: left;
+    padding: 0.5rem 2rem;
 }
