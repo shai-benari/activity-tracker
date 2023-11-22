@@ -1,7 +1,7 @@
 
 
 type Activity = {
-    name: string,
+    date: string,
     activity: string,
     startTime: string,
     endTime: string,
@@ -22,14 +22,13 @@ else {
         const formData = new FormData(e.target as HTMLFormElement);
 
         activitys.push({
-            name: getString(formData, "name"),
+            date: getRequiredString(formData, "date"),
             activity: getRequiredString(formData, "activity"),
             startTime:  getRequiredString(formData, "startTime"),
             endTime: getRequiredString(formData, "endTime"),
         });
 
         console.log(activitys);
-        // console.log(DiscountRate);
     });
 }
 
@@ -61,50 +60,29 @@ function getRequiredString(formData: FormData, key: string) {
     return value;
 };
 function addRow() {
-    // Get the table element in which you want to add row
     let table = document.querySelector("table") as HTMLTableElement || null;
  
-    // Create a row using the inserRow() method and
-    // specify the index where you want to add the row
-    addActivityForm.addEventListener("submit", function (e) {
+    addActivityForm!.addEventListener("submit", function (e) {
         e.preventDefault();
-    let row = table.insertRow(-1); // We are adding at the 
-
+    let row = table.insertRow(-1); 
  
-    // Create table cells
     let c1 = row.insertCell(0);
     let c2 = row.insertCell(1);
     let c3 = row.insertCell(2);
     let c4 = row.insertCell(3);
+
+    const val0 = document.querySelector('#date')!.value as HTMLInputElement || null;
+    const val1 = document.querySelector('#activity')!.value as HTMLInputElement || null;
+    const val2 = document.querySelector('#startTime')!.value as HTMLInputElement || null;
+    const val3 = document.querySelector('#endTime')!.value as HTMLInputElement || null;
+
  
-    // Add data to c1 and c2
-    c1.innerText = "Elon"
-    c2.innerText = "45"
-    c3.innerText = "Houston"
-    c4.innerText = "test"
+    c1.append(val0);
+    c2.append(val1);
+    c3.append(val2);
+    c4.append(val3);
 })};
 
- addRow()
-// const newRow = document.querySelector('tr') as HTMLElement || null ;
-// ['name', 'activity', 'startTime', 'endTime'].forEach(colText =>{
-//     const col = document.createElement('td');
-//     col.innerText = colText;
-//     newRow?.appendChild(col);
-    
-// });
-// document.querySelector('table')?.appendChild(newRow);
+ addRow();
 
-// function parseLicenseType(value: string): LicenseType {
-//     if (value !== "A" && value !== "B" && value !== "C") {
-//         throw new Error(`Invalid license type: ${value}`);
-//     }
-
-//     return value;
-// }
-// function parseStatus(value: string): status {
-//     if (value !== "normal" && value !== "free" && value !== "discount" && value !== "banned") {
-//         throw new Error(`Invalid status type: ${value}`);
-//     }
-//     return value;
-// }
 
