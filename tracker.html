@@ -8,16 +8,16 @@
 </head>
 <body>
     <main>
-        <form class="addActivity">
+        <form class="addActivity" name="add-new-activity">
             <h1>Activity tracker</h1>
         </div>
         <div class="add__activity">
             <label for="name" >Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" >
         </div>
         <div class="add__activity">
             <label for="name" >Activity</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="activity" name="activity" required>
         </div>
         <div class="add__activity">
             <label for="startTime" >Start time </label>
@@ -25,12 +25,22 @@
         </div>
         <div class="add__activity">
             <label for="startTime" >End time </label>
-            <input type="time" id="startTime" name="startTime" required>
+            <input type="time" id="endTime" name="endTime" required>
         </div>
         <div class="btn">
-            <BUtton class="btnActivity">Submit activity</BUtton>
+            <BUtton type="submit">Submit activity</BUtton>
          </div>
-        </form>
+        
+        <article class="activity-table">
+            <table>
+                <tr class="ROW">
+                  <th>Name</th>
+                  <th>activity</th>
+                  <th>Start time</th>
+                  <th>End time</th
+              </table>
+        </article>
+    </form>
     </main>
     <script src="dist/tracker.js"></script>
 </body>

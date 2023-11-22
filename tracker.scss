@@ -46,3 +46,24 @@ button{
     justify-items: left;
     padding: 0.5rem 2rem;
 }
+table{
+    background: rgb(108, 132, 241);
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 12px;
+    width: 100%;
+  
+    display: grid;
+    align-items: center;
+   justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+td , th{
+    border: 2px solid black;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    
+    
+}
