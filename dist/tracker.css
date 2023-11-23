@@ -38,6 +38,7 @@ button {
   font-weight: 500;
   padding: 0.3rem 2rem;
   border-radius: 5px;
+  background-color: aquamarine;
 }
 
 .addActivity {
@@ -71,4 +72,17 @@ td, th {
   align-items: center;
   padding: 0.3rem 1rem;
   border-radius: 5px;
+}
+
+.end-time {
+  border: 2px solid black;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+  padding: 0.2rem;
 }

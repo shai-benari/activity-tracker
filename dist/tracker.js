@@ -54,6 +54,35 @@ function addRow() {
         c2.append(val1);
         c3.append(val2);
         c4.append(val3);
+        function addHours(date, hours) {
+            date.setTime(date.getTime() + hours * 60 * 60 * 1000);
+            return date;
+        }
+        // ✅ Add 1 hour to the current date
+        var duration = document.querySelector('#duration').value || null;
+        var deadline = addHours(new Date(), duration);
+        // To call defined fuction every second
+        var x = setInterval(function () {
+            // Getting current time in required format
+            var now = new Date().getTime();
+            // Calculating the difference
+            var t = deadline - now;
+            // Getting value of days, hours, minutes, seconds
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            // Output the remaining time
+            document.getElementById("time-to-end").innerHTML =
+                days + "d " + hours + "h " +
+                    minutes + "m " + seconds + "s ";
+            // Output for over time
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("time-to-end")
+                    .innerHTML = "EXPIRED";
+            }
+        }, 1000);
     });
 }
 ;
